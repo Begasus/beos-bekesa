@@ -1,0 +1,235 @@
+Debug information for team /boot/home/Desktop/beos-bekesa-master/objects.x86-cc2-release/BeKESA (11436):
+CPU(s): 2x AMD A-Series
+Memory: 2.00 GiB total, 728.61 MiB used
+Haiku revision: hrev52358 Sep 23 2018 16:44:27 (BePC)
+
+Active Threads:
+	thread 11440: team 11436 debug task 
+	thread 11436: BeKESA (main)
+		state: Exception (Segment violation)
+
+		Frame		IP			Function Name
+		-----------------------------------------------
+		0x7164ada8	0x2158f11	_IO_default_xsputn + 0x81 
+			Disassembly:
+				_IO_default_xsputn:
+				0x02158e90:               55  push %ebp
+				0x02158e91:             89e5  mov %esp, %ebp
+				0x02158e93:           83ec1c  sub $0x1c, %esp
+				0x02158e96:               57  push %edi
+				0x02158e97:               56  push %esi
+				0x02158e98:               53  push %ebx
+				0x02158e99:       e800000000  call 0x2158e9e
+				0x02158e9e:               5b  pop %ebx
+				0x02158e9f:     81c3a6140800  add $0x814a6, %ebx
+				0x02158ea5:           8b450c  mov 0xc(%ebp), %eax
+				0x02158ea8:           8b5510  mov 0x10(%ebp), %edx
+				0x02158eab:           8945fc  mov %eax, -0x4(%ebp)
+				0x02158eae:           8955f8  mov %edx, -0x8(%ebp)
+				0x02158eb1:             85d2  test %edx, %edx
+				0x02158eb3:             7507  jnz 0x2158ebc
+				0x02158eb5:             31c0  xor %eax, %eax
+				0x02158eb7:       e9a9000000  jmp 0x2158f65
+				0x02158ebc:           8b4d08  mov 0x8(%ebp), %ecx
+				0x02158ebf:           8b7914  mov 0x14(%ecx), %edi
+				0x02158ec2:           8b7118  mov 0x18(%ecx), %esi
+				0x02158ec5:             29fe  sub %edi, %esi
+				0x02158ec7:             85f6  test %esi, %esi
+				0x02158ec9:             7e59  jle 0x2158f24
+				0x02158ecb:           3b75f8  cmp -0x8(%ebp), %esi
+				0x02158ece:             7603  jbe 0x2158ed3
+				0x02158ed0:           8b75f8  mov -0x8(%ebp), %esi
+				0x02158ed3:           83fe14  cmp $0x14, %esi
+				0x02158ed6:             7e20  jle 0x2158ef8
+				0x02158ed8:           83c4fc  add $0xfffffffc, %esp
+				0x02158edb:               56  push %esi
+				0x02158edc:           8b45fc  mov -0x4(%ebp), %eax
+				0x02158edf:               50  push %eax
+				0x02158ee0:               57  push %edi
+				0x02158ee1:       e876580400  call 0x219e75c
+				0x02158ee6:           8b5508  mov 0x8(%ebp), %edx
+				0x02158ee9:           83c410  add $0x10, %esp
+				0x02158eec:             01f7  add %esi, %edi
+				0x02158eee:           897a14  mov %edi, 0x14(%edx)
+				0x02158ef1:           0175fc  add %esi, -0x4(%ebp)
+				0x02158ef4:             eb2b  jmp 0x2158f21
+				0x02158ef6:             89f6  mov %esi, %esi
+				0x02158ef8:             85f6  test %esi, %esi
+				0x02158efa:             7f04  jg 0x2158f00
+				0x02158efc:             31f6  xor %esi, %esi
+				0x02158efe:             eb21  jmp 0x2158f21
+				0x02158f00:             89fa  mov %edi, %edx
+				0x02158f02:           8d4eff  lea -0x1(%esi), %ecx
+				0x02158f05:             85c9  test %ecx, %ecx
+				0x02158f07:             7c12  jl 0x2158f1b
+				0x02158f09:           8d7600  lea (%esi), %esi
+				0x02158f0c:           8b7dfc  mov -0x4(%ebp), %edi
+				0x02158f0f:             8a07  mov (%edi), %al
+				0x02158f11:             8802  mov %al, (%edx) <--
+
+			Frame memory:
+				[0x7164ad80]  D.....dq........   44 a3 1d 02 f4 c4 64 71 04 00 00 00 00 00 00 00
+				[0x7164ad90]  ................   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+				[0x7164ada0]  ......=.           04 00 00 00 8b a6 3d 02
+		0x7164c4b8	0x2173e0b	vfprintf + 0x1c33 
+		0x7164c598	0x215bc62	_IO_vsprintf + 0x5e 
+		0x7164c5c8	0x2171962	sprintf + 0x22 
+		0x7164c650	0x239fcbf	sqliteOsTempFileName(char*) + 0xaf (/boot/home/Desktop/fak/sqlite-bin/../sqlite-2.8.11/src/os.c:-1)
+			Variables:
+			zBuf: Bad address
+			azDirs: Unavailable {
+				azDirs[0]: /var/tmp
+				azDirs[1]: /usr/tmp
+				azDirs[2]: /tmp
+				azDirs[3]: .
+			}
+			zChars: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+			i: No such file or directory
+			j: No such file or directory
+			buf {
+				st_dev: 3
+				st_ino: 2097195
+				st_mode: 16794093
+				st_nlink: 1
+				st_uid: 0
+				st_gid: 0
+				st_size: 2048
+				st_rdev: -1
+				st_blksize: 65536
+				st_atime: 1538051626
+				st_mtime: 411166000
+				st_ctime: 1538051564
+				st_crtime: 450887680
+			}
+			zDir: /tmp
+
+		0x5baccdec	0x1ae00000	? 
+
+		Registers:
+			  eip:	0x02158f11
+			  esp:	0x7164ad80
+			  ebp:	0x7164ada8
+			  eax:	0x023da62f
+			  ebx:	0x021da344
+			  ecx:	0x00000003
+			  edx:	0x589a7b5c
+			  esi:	0x00000004
+			  edi:	0x023da68b
+			   cs:	0x001b
+			   ds:	0x0023
+			   es:	0x0023
+			   fs:	0x0063
+			   gs:	0x0023
+			   ss:	0x0023
+			  st0:	0
+			  st1:	0
+			  st2:	19
+			  st3:	19
+			  st4:	570
+			  st5:	2
+			  st6:	0
+			  st7:	0
+			  mm0:	{0, 0, 0, 0}
+			  mm1:	{0, 0, 0, 0}
+			  mm2:	{0, 0, 0, 0x9800}
+			  mm3:	{0, 0, 0, 0x9800}
+			  mm4:	{0, 0, 0, 0x8e80}
+			  mm5:	{0, 0, 0, 0x8000}
+			  mm6:	{0, 0, 0, 0}
+			  mm7:	{0, 0, 0, 0}
+			 xmm0:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm1:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm2:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm3:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm4:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm5:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm6:	{0, 0, 0, 0, 0, 0, 0, 0}
+			 xmm7:	{0, 0, 0, 0, 0, 0, 0, 0}
+
+Loaded Images:
+	ID		Text Base	Text End	Data Base	Data End	Type	Name
+	--------------------------------------------------------------------------------
+	64458	0x00871000	0x00890000	0x00890000	0x00893000	lib    	/boot/system/runtime_loader
+	64469	0x008ad000	0x00a1f000	0x00a1f000	0x00a53000	lib    	/boot/system/lib/libicuuc.so.57.1
+	64468	0x00a8d000	0x00ac6000	0x00ac6000	0x00afd000	lib    	/boot/system/lib/libicutu.so.57.1
+	64467	0x00aff000	0x00b0a000	0x00b0a000	0x00b0d000	lib    	/boot/system/lib/libiculx.so.57.1
+	64470	0x016ff000	0x01719000	0x01719000	0x0171a000	lib    	/boot/system/lib/libz.so.1.2.11
+	64466	0x01720000	0x01773000	0x01773000	0x0177e000	lib    	/boot/system/lib/libicule.so.57.1
+	64465	0x019eb000	0x019f4000	0x019f4000	0x019f6000	lib    	/boot/system/lib/libicuio.so.57.1
+	64460	0x01c4e000	0x01f1f000	0x01f1f000	0x01fb9000	lib    	/boot/system/lib/libbe.so
+	64461	0x020f8000	0x021d0000	0x021d0000	0x0221b000	lib    	/boot/system/lib/libroot.so
+	64462	0x022c8000	0x022fa000	0x022fa000	0x02307000	lib    	/boot/system/lib/libstdc++.r4.so
+	64459	0x02378000	0x023e4000	0x023e4000	0x023f2000	app    	/boot/home/Desktop/beos-bekesa-master/objects.x86-cc2-release/BeKESA
+	64463	0x024a2000	0x03d20000	0x03d20000	0x03d21000	lib    	/boot/system/lib/libicudata.so.57.1
+	64464	0x03de1000	0x04072000	0x04072000	0x040db000	lib    	/boot/system/lib/libicui18n.so.57.1
+	64457	0x64094000	0x6409c000	0x00000000	0x00000000	system 	commpage
+
+Areas:
+	ID		Base		End			Size (KiB)	Protection	Locking			Name
+	--------------------------------------------------------------------------------
+	285588	0x002ef000	0x002ff000	        64	rw-        	full          	rld heap
+	285587	0x0031a000	0x00322000	        32	rw-        	full          	rld heap
+	285555	0x00560000	0x00561000	         4	rw-S       	full          	_rld_debug_
+	285554	0x007c1000	0x007d1000	        64	rw-        	full          	rld heap
+	285551	0x00871000	0x00890000	       124	r-x        	full          	runtime_loader_seg0ro
+	285552	0x00890000	0x00892000	         8	rw-        	full          	runtime_loader_seg1rw
+	285553	0x00892000	0x00893000	         4	rw-        	full          	runtime_loader_bss1
+	285582	0x008ad000	0x00a1f000	      1480	r-x        	full          	libicuuc.so.57.1_seg0ro
+	285583	0x00a1f000	0x00a52000	       204	rw-        	full          	libicuuc.so.57.1_seg1rw
+	285584	0x00a52000	0x00a53000	         4	rw-        	full          	libicuuc.so.57.1_seg2rw
+	285579	0x00a8d000	0x00ac6000	       228	r-x        	full          	libicutu.so.57.1_seg0ro
+	285580	0x00ac6000	0x00acb000	        20	rw-        	full          	libicutu.so.57.1_seg1rw
+	285581	0x00acb000	0x00afd000	       200	rw-        	full          	libicutu.so.57.1_seg2rw
+	285577	0x00aff000	0x00b0a000	        44	r-x        	full          	libiculx.so.57.1_seg0ro
+	285578	0x00b0a000	0x00b0d000	        12	rw-        	full          	libiculx.so.57.1_seg1rw
+	285585	0x016ff000	0x01719000	       104	r-x        	full          	libz.so.1.2.11_seg0ro
+	285586	0x01719000	0x0171a000	         4	rw-        	full          	libz.so.1.2.11_seg1rw
+	285575	0x01720000	0x01773000	       332	r-x        	full          	libicule.so.57.1_seg0ro
+	285576	0x01773000	0x0177e000	        44	rw-        	full          	libicule.so.57.1_seg1rw
+	285573	0x019eb000	0x019f4000	        36	r-x        	full          	libicuio.so.57.1_seg0ro
+	285574	0x019f4000	0x019f6000	         8	rw-        	full          	libicuio.so.57.1_seg1rw
+	285559	0x01c4e000	0x01f1f000	      2884	r-x        	full          	libbe.so_seg0ro
+	285560	0x01f1f000	0x01fb8000	       612	rw-        	full          	libbe.so_seg1rw
+	285561	0x01fb8000	0x01fb9000	         4	rw-        	full          	libbe.so_seg2rw
+	285562	0x020f8000	0x021d0000	       864	r-x        	full          	libroot.so_seg0ro
+	285563	0x021d0000	0x021e3000	        76	rw-        	full          	libroot.so_seg1rw
+	285564	0x021e3000	0x0221b000	       224	rw-        	full          	libroot.so_seg2rw
+	285565	0x022c8000	0x022fa000	       200	r-x        	full          	libstdc++.r4.so_seg0ro
+	285566	0x022fa000	0x02305000	        44	rw-        	full          	libstdc++.r4.so_seg1rw
+	285567	0x02305000	0x02307000	         8	rw-        	full          	libstdc++.r4.so_seg2rw
+	285556	0x02378000	0x023e4000	       432	r-x        	full          	BeKESA_seg0ro
+	285557	0x023e4000	0x023f1000	        52	rw-        	full          	BeKESA_seg1rw
+	285558	0x023f1000	0x023f2000	         4	rw-        	full          	BeKESA_seg2rw
+	285568	0x024a2000	0x03d20000	     25080	r-x        	full          	libicudata.so.57.1_seg0ro
+	285569	0x03d20000	0x03d21000	         4	rw-        	full          	libicudata.so.57.1_seg1rw
+	285570	0x03de1000	0x04072000	      2628	r-x        	full          	libicui18n.so.57.1_seg0ro
+	285571	0x04072000	0x040da000	       416	rw-        	full          	libicui18n.so.57.1_seg1rw
+	285572	0x040da000	0x040db000	         4	rw-        	full          	libicui18n.so.57.1_seg2rw
+	285589	0x18693000	0x18743000	       704	rw-        	full          	heap
+	285548	0x61b25000	0x61b29000	        16	rw-        	full          	user area
+	285550	0x64094000	0x6409c000	        32	r-xSk      	full          	commpage
+	285596	0x6409c000	0x6409d000	         4	rw-S       	full          	server_memory
+	285549	0x70649000	0x7164f000	     16408	rw-s       	full          	BeKESA_11436_stack
+	285598	0x7164f000	0x7166f000	       128	rw-S       	full          	server_memory
+
+Protection Flags: r - read, w - write, x - execute, s - stack, o - overcommit, c - cloneable, S - shared, k - kernel
+
+Semaphores:
+	ID		Count	Last Holder	Name
+	------------------------------------------------------------
+	529109	    0	        439	BLooperList lock
+	529317	    0	        439	BMessageQueue Lock
+	529320	    0	        439	Catalog
+	529324	    0	        439	some BLocker
+	529325	    0	      10258	some BLocker
+	529326	    0	        439	token space
+	529328	    0	        439	AppServerLink_sLock
+	529329	    0	        439	some BBlockCache lock
+	529332	    0	        439	LocaleRosterData
+	529333	    0	        439	some BLocker
+	529334	    0	        439	AppLooperPort
+	529337	    0	       8571	clipboard
+	529342	    0	        439	screen list
+	529344	    0	        439	width buffer
+	529348	    0	       8571	BMessageQueue Lock
+	529351	    0	        439	BeKESA
