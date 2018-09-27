@@ -38,6 +38,7 @@
 #include <ScrollView.h>
 #include <TabView.h>
 #include <stdio.h>
+#include <Application.h>
 
 #include "bekesaprint.h"
 

@@ -2,7 +2,7 @@
 #ifndef _MAINWINDOW_H
 #define _MAINWINDOW_H
 
-	#include <SpLocaleApp.h>
+//	#include <SpLocaleApp.h>
 	#include <Window.h>
 	#include <sqlite.h>
 	#include "globals.h"
@@ -49,6 +49,7 @@ class kesadat {
 	class BMenuBar;
 	class BTabView;
 	class BTextControl;
+	class BRadioButton;
 
 	class BeKESAMainWindow : public BWindow {
 		public:
